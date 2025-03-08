@@ -1,8 +1,9 @@
+# Ignore node_modules in the server folder
+server/node_modules/
 
-node_modules/
-
-
+# Ignore uploads and temp directories in the server folder
 server/uploads/
 server/temp/
 
+# Ignore node_modules in the client folder
 client/node_modules/

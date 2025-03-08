@@ -1,0 +1,118 @@
+    // if (Array.isArray(attachments) && attachments.length) {
+    //   try {
+    //     let flag;
+    //     if (attachments.length > 1) {
+    //       const allImages = attachments.every((attachment) => {
+    //         const mimetype = mime.lookup(path.join(__temp, attachment));
+    //         return mimetype && mimetype.includes("image");
+    //       });
+
+    //       if (!allImages) {
+    //         throwError(
+    //           "All attachments must be images when there are multiple files.",
+    //           400
+    //         );
+    //       }
+
+    //       // Set flag to true for images
+    //       flag = true;
+
+    //       // Process all images
+    //       await Promise.all(
+    //         attachments.map((attachment) =>
+    //           sharp(path.join(__temp, attachment))
+    //             .rotate()
+    //             .resize(800)
+    //             .jpeg({ quality: 80 })
+    //             .withMetadata(false) // Strip all EXIF metadata
+    //             .toFile(path.join(__uploads, `posts/${attachment}`))
+    //         )
+    //       );
+    //     } else {
+    //       // Handle single attachment case
+    //       const mimetype = mime.lookup(path.join(__temp, attachments[0]));
+
+    //       if (mimetype && mimetype.includes("image")) {
+    //         // It's a single image
+    //         flag = true;
+
+    //         // Process the single image
+    //         await sharp(path.join(__temp, attachments[0]))
+    //           .resize(800)
+    //           .jpeg({ quality: 80 })
+    //           .toFile(path.join(__uploads, `posts/${attachments[0]}`));
+    //       } else if (mimetype && mimetype.includes("video")) {
+    //         // It's a video
+    //         flag = false;
+
+    //         // Process the video
+    //         await processVideo(
+    //           path.join(__temp, attachments[0]),
+    //           path.join(__uploads, `posts/${attachments[0]}`)
+    //         );
+    //       } else {
+    //         throwError(
+    //           "Invalid attachment type. Must be an image or video.",
+    //           400
+    //         );
+    //       }
+    //     }
+
+    //     // Prepare the post
+    //     const formattedPost = await addPost(
+    //       {
+    //         text: postText || null,
+    //         image: flag ? attachments : null, // If flag is true, it's an image, so assign the array
+    //         video: flag ? null : attachments[0], // If flag is false, it's a video, so assign the video
+    //       },
+    //       "regular",
+    //       user_id
+    //     );
+
+    //     return res.json(formattedPost);
+    //   } catch (error) {
+    //     throwError("An error occurred while processing your post.", 500);
+    //   }
+    // } else if (event) {
+    //   try {
+    //     const formattedPost = await addPost(
+    //       { text: postText, event: event },
+    //       "event",
+    //       user_id
+    //     );
+    //     return res.json(formattedPost);
+    //   } catch {
+    //     throwError("an error occurred while processing your post (2)", 500);
+    //   }
+    // } else if (poll) {
+    //   try {
+    //     let newPoll = {
+    //       options: poll.map((value) => {
+    //         return { option: value, votes: 0 };
+    //       }),
+    //       voters: {},
+    //     };
+    //     const formattedPost = await addPost(
+    //       {
+    //         text: postText,
+    //         poll: newPoll,
+    //       },
+    //       "poll",
+    //       user_id
+    //     );
+    //     return res.json(formattedPost);
+    //   } catch {
+    //     throwError("An error occurred while processing your post (3)", 500);
+    //   }
+    // } else {
+    //   try {
+    //     const formattedPost = await addPost(
+    //       { text: postText },
+    //       "regular",
+    //       user_id
+    //     );
+    //     return res.json(formattedPost);
+    //   } catch {
+    //     throwError("An error occurred while processing your post (4)", 500);
+    //   }
+    // }

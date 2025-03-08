@@ -1,0 +1,32 @@
+body {
+  font-family: 'Poppins';
+  // overflow-y: hidden;
+  // background-color: var(--bg-color);
+}
+
+:root {
+  --bg-color: #06141d;
+  --comment-color: #101d27;
+  --comment-color: #141f27;
+  --comment-color: #18242d;
+
+  --secondary-bg-color: #1b2730;
+  --bg-color-lighter: #28343e;
+  --text-color: #95a3b1;
+  --text-color-faded: #778591;
+  --text-color-glowing: #348fc8;
+  //   --green: #20da97;
+  //
+  --green: #5fad91;
+  --blue: #468aed;
+  --red: #ff6a6a;
+  --text-color-black: rgb(78, 78, 78);
+  --hr-color: rgba(255, 255, 255, 0.1);
+
+  --chats-bg-color: rgb(40, 52, 62, 0.5);
+
+  --msg-bg: #2d3f4d;
+  --msg-bg-2: #274053;
+
+  // #a8b2bb
+}

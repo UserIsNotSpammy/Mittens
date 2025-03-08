@@ -1,0 +1,86 @@
+.skeleton-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.7em;
+  // background-color: var(--comment-color);
+  border-radius: 1em;
+
+  max-width: 100%;
+}
+
+.post-skeleton {
+  padding: 1rem 2rem;
+  .skeleton-circle {
+    width: 50px;
+    height: 50px;
+  }
+}
+.comments-section .skeleton-container {
+  border-radius: 0.5em;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.post-skeleton {
+  background-color: var(--secondary-bg-color);
+}
+.skeleton-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite ease-in-out;
+}
+
+.skeleton-content {
+  flex: 1;
+}
+
+.skeleton-line {
+  height: 8px; /* Thinner lines */
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+  background-size: 200% 100%;
+  border-radius: 8px;
+  animation: loading 1.5s infinite ease-in-out;
+  opacity: 0.3; /* Lower opacity */
+}
+
+.skeleton-picture {
+  width: 100%;
+  height: 300px;
+  opacity: 0.3; /* Lower opacity */
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+  background-size: 200% 100%;
+  border-radius: 0.5em;
+  animation: loading 1.5s infinite ease-in-out;
+}
+
+.skeleton-line.short {
+  width: 100px; /* Shorter lines on top */
+}
+.skeleton-line.short:nth-last-of-type(2) {
+  width: 70px; /* Shorter lines on top */
+}
+
+.skeleton-line.long {
+  width: 70%; /* Full width lines below */
+}
+
+.skeleton-line.long:nth-of-type(2) {
+  width: 100%; /* Full width lines below */
+}
+.skeleton-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.map-skeleton {
+  margin-top: 1rem;
+  border-radius: 0.5em;
+  width: 100%;
+  height: 270px;
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite ease-in-out;
+}

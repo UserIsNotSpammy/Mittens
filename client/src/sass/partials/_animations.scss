@@ -1,0 +1,76 @@
+@keyframes like {
+  0% {
+    filter: brightness(100%), invert(100%);
+    transform: scale(0.3);
+  }
+
+  100% {
+    transform: scale(1);
+    filter: invert(58%) sepia(82%) saturate(1976%) hue-rotate(317deg) brightness(100%) contrast(104%);
+  }
+}
+
+@keyframes save {
+  0% {
+    filter: brightness(100%), invert(100%);
+    transform: translateY(-200px);
+  }
+
+  100% {
+    transform: translateY(0);
+    filter: invert(47%) sepia(91%) saturate(2600%) hue-rotate(199deg) brightness(102%) contrast(86%);
+  }
+}
+
+@keyframes remeow {
+  0% {
+    filter: brightness(100%), invert(100%);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    filter: invert(81%) sepia(64%) saturate(571%) hue-rotate(88deg) brightness(89%) contrast(92%);
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@keyframes openUp {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes showUp {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+    top: 0;
+  }
+  100% {
+    opacity: 0;
+
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

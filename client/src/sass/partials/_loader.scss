@@ -1,0 +1,78 @@
+// .loader-container{
+//     visibility: visible;
+//     position: absolute;
+//     width: 100%;
+//     z-index: 1000;
+//     height: 100%;
+//     inset: 0;
+//     margin: auto;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     z-index: 1000;
+//     transition: visibility 0.2s ;
+//     background-color: rgba(0, 0, 0, 0.5);
+//     .spinner{
+//         position: relative;
+//         width: 90px;
+//         height: 90px;
+//         border-radius: 50%;
+//         border: 1px solid black;
+//         &::after{
+//             position: absolute;
+//             border-radius: 50%;
+//             margin: auto;
+//             content: '';
+//             inset: 0;
+//             width:91%;
+//             height: 91%;
+//             background-color: white;
+//         }
+//     }
+// }
+
+// @keyframes spinner {
+
+//     0%{
+//         transform: rotate(0deg);
+//     }
+
+//     100%{
+//         transform: rotate(3600deg);
+//     }
+// }
+
+.my-post-image-loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.6); // Dark semi-transparent background overlay
+
+  svg {
+    transform: rotate(270deg); // Rotates the loader for a circular effect
+    fill: none !important; // Ensure that the fill is transparent
+
+    height: calc(100% - 20px);
+  }
+
+  .background-circle {
+    stroke: #ffffffa8;
+    stroke: var(--bg-color-lighter); // Light gray background circle
+    stroke-width: 3px;
+  }
+
+  .loading-circle {
+    stroke: var(--bg-color-lighter);
+    stroke: #ffffffa8; // Blue progress circle
+    stroke-width: 4px;
+    stroke-dasharray: 338.726; // Full circumference of the circle
+    stroke-dashoffset: 0; // Hidden by default, changes based on upload progress
+    transition: stroke-dashoffset 0.3s linear; // Smooth transition
+  }
+}

@@ -76,7 +76,7 @@ async function handleRequest(req, ref, setIsLoading, cb, onError) {
     setIsLoading(false);
   } catch (error) {
     if (error.status == 503) {
-      stopRefetching(ref); // Ensure no duplicate intervals
+      stopRefetching(ref); 
       refetch(ref, () => handleRequest(req, ref, setIsLoading, cb, onError));
     } else {
       setIsLoading(false);
